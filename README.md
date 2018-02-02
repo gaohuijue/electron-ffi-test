@@ -8,3 +8,4 @@ node-gyp rebuild -target=1.7.12 -arch=x64 -dist-url=https://atom.io/download/ato
 cd node_modules/ref
 node-gyp rebuild -target=1.7.12 -arch=x64 -dist-url=https://atom.io/download/atom-shell
 ```
+[dll项目](https://github.com/gaohuijue/Ffi_Test)
