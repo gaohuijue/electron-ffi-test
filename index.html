@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
-  </body>
+</head>
+<body>
+<h1>Hello World!</h1>
+<!-- All of the Node.js APIs are available in this renderer process. -->
+We are using Node.js
+<script>document.write(process.versions.node)</script>
+,
+Chromium
+<script>document.write(process.versions.chrome)</script>
+,
+and Electron
+<script>document.write(process.versions.electron)</script>
+.
+<button id="btn" type="button">调用DLL</button>
+<div id="logView" style="height:100px;width:200px;background-color: aquamarine;"></div>
+<script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+</script>
+</body>
 </html>

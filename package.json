@@ -1,22 +1,24 @@
 {
-  "name": "electron-quick-start",
+  "name": "electron-ffi-test",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal Electron application with node-ffi demo.",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/gaohuijue/electron-ffi-test.git",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
+    "node-ffi",
     "demo"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "ghj",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "~1.7.8",
+    "electron-packager": "^10.1.2",
+    "electron-rebuild": "^1.7.3"
+  },
+  "dependencies": {
+    "ffi": "^2.2.0"
   }
 }
