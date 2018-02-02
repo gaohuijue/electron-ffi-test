@@ -2,11 +2,15 @@ const ffi = require('ffi')
 const demo = ffi.Library('./native/Ffi_Test', {
     'say_hello': ['string', []],
     'register_listener': ['void', ['pointer']],
-    'fire': ['void', []]
+    'fire': ['void', []],
+    'start_timer': ['void', []]
 })
 const logView = document.getElementById('logView')
 document.getElementById('btn').onclick = function () {
     logView.innerHTML += `${demo.say_hello()}<br/>`
+}
+document.getElementById('startTimerBtn').onclick = function () {
+    demo.start_timer()
 }
 
 const listener1 = ffi.Callback('void', ['string', 'string'],
