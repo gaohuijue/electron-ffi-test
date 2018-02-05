@@ -13,13 +13,14 @@ document.getElementById('startTimerBtn').onclick = function () {
     demo.start_timer()
 }
 
-const listener1 = ffi.Callback('void', ['string', 'string'],
-    function (name, code) {
-        console.log('listener1', name, code);
-    }),
+const
+    listener1 = ffi.Callback('void', ['string', 'string'],
+        function (name, code) {
+            logView.innerHTML += `listener1:${name},${code}<br/>`
+        }),
     listener2 = ffi.Callback('void', ['string', 'string'],
         function (name, code) {
-            console.log('listener2', name, code);
+            logView.innerHTML += `listener2:${name},${code}<br/>`
         });
 // make an extra reference to callback to avoid GC.
 process.on('exit', function () {
